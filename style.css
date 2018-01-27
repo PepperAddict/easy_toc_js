@@ -1,0 +1,53 @@
+/****  The main stylesheet ***/
+html {
+    margin:10px;
+    color:#292929;
+    font-size:18px;
+    font-family:arial;
+    width:80%;
+    margin: 0px auto;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+/*** Contents stylesheet ***/
+
+#contents h1 {
+    color: #e0e0e0;
+    background:#464646;
+    padding: 5px;
+}
+
+/***  The Table of Contents stylesheet ****/
+
+#toc{
+float:right;
+top:0px;
+background:#fff;
+font-size: 18px;
+padding: 30px;
+margin: 0px;
+text-decoration:none;
+}
+
+#toc h2
+{
+ text-align:center;
+}
+
+#toc dt , #toc dt a{
+background: #000;
+color: #fff;
+margin: none;
+text-align:left;
+padding: 5px;
+margin: 10px 0px 10px 0px;
+list-style-type: disc;
+}
+#toc dd, #toc dd a {
+background:none;
+list-style-type: square;
+color:darkblue;
+}
