@@ -2,8 +2,6 @@
 This is a simple way to create table of contents using header tags.
 It will retrieve the header tags inside the contents ID and spit out into the toc ID.
 
-link:https://htmlpreview.github.io/?https://github.com/PepperAddict/easy_toc_js/blob/master/index.html[demo]
-
 == Usage
 === the Content
 Wrap the content that you want with a div ID: *contents*. 
@@ -33,6 +31,30 @@ Table of contents
 === the JS
 the javascript will only use h1 tags as the parent and h2, h3, h4, and so on are the children.
 You can easily modify the condition to your liking.
+
+----
+window.onload = function () {
+    var toc = '';
+    var level = 0;
+    var search = /<h([\d])>([^<]+)<\/h([\d])>/gi;
+
+    function sit (regExp, substr, subReplacer, replacement) {
+        level = parseInt(substr);
+        var anchor = subReplacer.replace(/ /g, "_");
+        if (substr < 2){
+        toc += "<dt><a href=\"#" + anchor + "\">" + subReplacer + "</a></dt>";   
+        }
+        else if (substr >= 2) {
+        toc += "<dd><a href=\"#" + anchor + "\">" + subReplacer + "</a></dd>";              
+        }        
+        return "<h" + substr + "><a name=\"" + anchor + "\">" + subReplacer + "</a></h" + replacement + ">";  
+}
+
+    document.getElementById("contents").innerHTML = document.getElementById("contents").innerHTML.replace(search, sit);
+    document.getElementById("toc").innerHTML += toc;
+};
+----
+
 
 == That's it.
 You can now easily customize the style your way or use mine.
