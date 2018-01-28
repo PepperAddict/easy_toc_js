@@ -29,5 +29,9 @@ Inside the div, be sure to have the title of the table of contents if you need a
 Table of contents
 </div>
 
+=== the JS
+the javascript will only use h1 tags as the parent and h2, h3, h4, and so on are the children.
+You can easily modify the condition to your liking.
+
 == That's it.
 You can now easily customize the style your way or use mine.
