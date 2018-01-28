@@ -55,6 +55,10 @@ window.onload = function () {
 };
 ----
 
+== Note
+Keep in mind that I decided to use dt and dd instead since it was easier to write.
+
+link:https://www.w3schools.com/tags/tag_dd.asp[dd tag link]
 
 == That's it.
 You can now easily customize the style your way or use mine.
