@@ -18,7 +18,7 @@ Example below will not include header title since it is not inside the contents 
 
 === the TOC
 We need a placeholder for the actual table of contents. To do this, insert a div with the ID: *toc*.
-Inside the div, be sure to have the title of the table of contents if you want any any.
+Inside the div, be sure to have the title of the table of contents if you want any.
 
 
 ----
