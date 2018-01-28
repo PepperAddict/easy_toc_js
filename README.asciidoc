@@ -55,7 +55,7 @@ window.onload = function () {
 ----
 
 == Note
-Keep in mind that I decided to use dt and dd instead since it was easier to separate in one line.
+Keep in mind when styling, I decided to use dt and dd instead of the usual ul and li. I just found dt and dd easier to separate in one line.
 
 link:https://www.w3schools.com/tags/tag_dd.asp[w3school:dd tag]
 
