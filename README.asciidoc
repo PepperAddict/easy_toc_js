@@ -1,10 +1,13 @@
 == Table of contents javascript
-This is a simple way to create table of contents using header tags inside an ID tag
-inserted into a table of contents that is inside a different ID.
+This is a simple way to create table of contents using header tags.
+It will retrieve the header tags inside the contents ID and spit out into the toc ID.
+
+link:https://htmlpreview.github.io/?https://github.com/PepperAddict/easy_toc_js/blob/master/index.html[demo]
 
 == Usage
-=== the content
-Wrap the content that you want with a div with the ID: *contents*. 
+=== the Content
+Wrap the content that you want with a div ID: *contents*. 
+Example below will not include header title since it is not inside the contents div.
 
 .example
 ----
@@ -16,11 +19,15 @@ Wrap the content that you want with a div with the ID: *contents*.
 </div>
 ----
 
-=== the table of contents
+=== the TOC
 We need a placeholder for the actual table of contents. To do this insert a div with the ID: *toc*.
 Inside the div, be sure to have the title of the table of contents if you need any.
+
 .example
 ----
 <div id="toc">
 Table of contents
 </div>
+
+== That's it.
+You can now easily customize the style your way or use mine.
