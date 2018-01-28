@@ -4,10 +4,9 @@ It will retrieve the header tags inside the contents ID and spit out into the to
 
 == Usage
 === the Content
-Wrap the content that you want with a div ID: *contents*. 
+Wrap the content that you want with the ID: *contents*. 
 Example below will not include header title since it is not inside the contents div.
 
-.example
 ----
 <h1>title</h1>
 
@@ -18,10 +17,10 @@ Example below will not include header title since it is not inside the contents 
 ----
 
 === the TOC
-We need a placeholder for the actual table of contents. To do this insert a div with the ID: *toc*.
-Inside the div, be sure to have the title of the table of contents if you need any.
+We need a placeholder for the actual table of contents. To do this, insert a div with the ID: *toc*.
+Inside the div, be sure to have the title of the table of contents if you want any any.
 
-.example
+
 ----
 <div id="toc">
 Table of contents
@@ -29,7 +28,7 @@ Table of contents
 ----
 
 === the JS
-the javascript will only use h1 tags as the parent and h2, h3, h4, and so on are the children.
+The javascript will only use h1 tags as the parent and h2, h3, h4, and so on are the children.
 You can easily modify the condition to your liking.
 
 ----
@@ -56,9 +55,9 @@ window.onload = function () {
 ----
 
 == Note
-Keep in mind that I decided to use dt and dd instead since it was easier to write.
+Keep in mind that I decided to use dt and dd instead since it was easier to separate in one line.
 
-link:https://www.w3schools.com/tags/tag_dd.asp[dd tag link]
+link:https://www.w3schools.com/tags/tag_dd.asp[w3school:dd tag]
 
 == That's it.
 You can now easily customize the style your way or use mine.
