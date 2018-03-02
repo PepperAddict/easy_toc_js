@@ -28,31 +28,32 @@ Table of contents
 ----
 
 === the JS
-The javascript will only use h1 tags as the parent and h2, h3, h4, and so on are the children.
-You can easily modify the condition to your liking.
+I changed the JavaScript to ES6 and took out the unecessary if statement. +
+The li class in CSS will be the biggest factor in its indentation. 
 
 ----
 window.onload = function () {
-    var toc = '';
-    var level = 0;
-    var search = /<h([\d])>([^<]+)<\/h([\d])>/gi;
+    let toc = '';
+    let level = 0;
+    const search = /<h([\d])>([^<]+)<\/h([\d])>/gi;
 
-    function sit (regExp, substr, subReplacer, replacement) {
+    function table (regExp, substr, subReplacer) {
         level = parseInt(substr);
-        var anchor = subReplacer.replace(/ /g, "_");
-        if (substr < 2){
-        toc += "<dt><a href=\"#" + anchor + "\">" + subReplacer + "</a></dt>";   
-        }
-        else if (substr >= 2) {
-        toc += "<dd><a href=\"#" + anchor + "\">" + subReplacer + "</a></dd>";              
-        }        
-        return "<h" + substr + "><a name=\"" + anchor + "\">" + subReplacer + "</a></h" + replacement + ">";  
+        const anchor = subReplacer.replace(/ /g, "_");
+        toc += `<li class="tocl${level}"><a href="#${anchor}">${subReplacer}</a></li>`;   
+        return ` <h${substr}> <a href="#${anchor}" id=${anchor}>${subReplacer}</a></h${substr}>`;  
 }
 
-    document.getElementById("contents").innerHTML = document.getElementById("contents").innerHTML.replace(search, sit);
+    document.getElementById("contents").innerHTML = document.getElementById("contents").innerHTML.replace(search, table);
     document.getElementById("toc").innerHTML += toc;
 };
 ----
+
+=== the CSS 
+Just take a peak to figure out what's going on. Nothing special. Just give the h1- h3 a property.
+
+* original link:css/style.scss[scss]
+* compiled link:css/style.css[css]
 
 == Note
 Keep in mind when styling, I decided to use dt and dd instead of the usual ul and li. I just found dt and dd easier to separate in one line.

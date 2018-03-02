@@ -1,0 +1,71 @@
+/****  The main stylesheet ***/
+$bgcolor: (
+    bg1: #b4ecad,
+    bgmain: #f4f4f4
+);
+
+html {
+    margin:10px;
+    color:#292929;
+    font-size:18px;
+    font-family:arial;
+    width:80%;
+    margin: 0px auto;
+    background: map-get($bgcolor, bgmain)
+    
+}
+
+.container {
+    width:80%;
+    margin-left:15%;
+}
+/*** Contents stylesheet ***/
+
+#contents {
+    padding: 5px;
+    a {
+        color: red;
+        text-decoration: none;
+        transition: all 1s ease;
+        
+        &:hover {
+            color: blue;
+        }
+    }
+    @for $i from 1 through 3 {
+        h#{$i} {
+            font-size: 20px * 3 / $i;
+        }
+    }
+}
+
+/***  The Table of Contents stylesheet ****/
+
+#toc {
+width:30%;
+float:right;
+display:inline;
+font-size: 18px;
+padding: 30px;
+margin: 5px;
+text-decoration:none;
+    & h1 {
+        font-size: 18px;
+    }
+}
+
+
+.individual {
+    display: block;
+    width: 100%;
+}
+
+@for $i from 1 through 3 {
+    .tocl#{$i} {
+        @extend .individual;
+        padding-left: 7px * $i + $i + $i;
+        & a {
+            text-decoration: none;
+        }
+    }
+}

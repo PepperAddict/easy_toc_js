@@ -1,0 +1,87 @@
+/****  The main stylesheet ***/
+html {
+  margin: 10px;
+  color: #292929;
+  font-size: 18px;
+  font-family: arial;
+  width: 80%;
+  margin: 0px auto;
+  background: #f4f4f4;
+}
+
+.container {
+  width: 80%;
+  margin-left: 15%;
+}
+
+/*** Contents stylesheet ***/
+#contents {
+  padding: 5px;
+}
+
+#contents a {
+  color: red;
+  text-decoration: none;
+  transition: all 1s ease;
+}
+
+#contents a:hover {
+  color: blue;
+}
+
+#contents h1 {
+  font-size: 60px;
+}
+
+#contents h2 {
+  font-size: 30px;
+}
+
+#contents h3 {
+  font-size: 20px;
+}
+
+/***  The Table of Contents stylesheet ****/
+#toc {
+  width: 30%;
+  float: right;
+  display: inline;
+  font-size: 18px;
+  padding: 30px;
+  margin: 5px;
+  text-decoration: none;
+}
+
+#toc h1 {
+  font-size: 18px;
+}
+
+.individual, .tocl1, .tocl2, .tocl3 {
+  display: block;
+  width: 100%;
+}
+
+.tocl1 {
+  padding-left: 9px;
+}
+
+.tocl1 a {
+  text-decoration: none;
+}
+
+.tocl2 {
+  padding-left: 18px;
+}
+
+.tocl2 a {
+  text-decoration: none;
+}
+
+.tocl3 {
+  padding-left: 27px;
+}
+
+.tocl3 a {
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */

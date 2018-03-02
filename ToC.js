@@ -1,20 +1,15 @@
 window.onload = function () {
-    var toc = '';
-    var level = 0;
-    var search = /<h([\d])>([^<]+)<\/h([\d])>/gi;
+    let toc = '';
+    let level = 0;
+    const search = /<h([\d])>([^<]+)<\/h([\d])>/gi;
 
-    function sit (regExp, substr, subReplacer, replacement) {
+    function table (regExp, substr, subReplacer) {
         level = parseInt(substr);
-        var anchor = subReplacer.replace(/ /g, "_");
-        if (substr < 2){
-        toc += "<dt><a href=\"#" + anchor + "\">" + subReplacer + "</a></dt>";   
-        }
-        else if (substr >= 2) {
-        toc += "<dd><a href=\"#" + anchor + "\">" + subReplacer + "</a></dd>";              
-        }        
-        return "<h" + substr + "><a name=\"" + anchor + "\">" + subReplacer + "</a></h" + replacement + ">";  
+        const anchor = subReplacer.replace(/ /g, "_");
+        toc += `<li class="tocl${level}"><a href="#${anchor}">${subReplacer}</a></li>`;   
+        return ` <h${substr}> <a href="#${anchor}" id=${anchor}>${subReplacer}</a></h${substr}>`;  
 }
 
-    document.getElementById("contents").innerHTML = document.getElementById("contents").innerHTML.replace(search, sit);
+    document.getElementById("contents").innerHTML = document.getElementById("contents").innerHTML.replace(search, table);
     document.getElementById("toc").innerHTML += toc;
 };
